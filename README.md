@@ -52,6 +52,7 @@ Chat Summaries: System generated, simple summaries of the topics the learner has
 
 
 ## 📁 Project StructurePlaintext├── src/
+``` bash
 │   ├── components/      # Reusable React components (UI, Chat, Dashboard)
 │   ├── services/
 │   │   └── gemini.ts    # AI API client and prompt engineering logic
@@ -63,6 +64,8 @@ Chat Summaries: System generated, simple summaries of the topics the learner has
 ├── .env                 # Environment variables (not tracked in Git)
 ├── index.html           # HTML template
 └── package.json         # Project dependencies and scripts
+
+```
 
 
 ## 🏗 Architecture
