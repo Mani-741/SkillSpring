@@ -68,45 +68,15 @@ Chat Summaries: System generated, simple summaries of the topics the learner has
 ```
 
 
+
 ## 🏗 Architecture
-The application follows a client-side architecture where the React frontend manages state and user interactions. The curriculum.ts file acts as a local, static database. User inputs and curriculum context are packaged and sent to the Google Gemini API via gemini.ts, which acts as the intelligent processing layer to return answers and recommendations.Code snippet flowchart TD
 
-```bash
-    User([User / Learner]) -->|Interacts via Browser| App
+The application follows a client-side architecture where the React frontend manages state and user interactions. The `curriculum.ts` file acts as a local, static database. User inputs and curriculum context are packaged and sent to the Google Gemini API via `gemini.ts`, which acts as the intelligent processing layer to return answers and recommendations.
 
-    subgraph Frontend [React Frontend Application]
-        App[App.tsx / main.tsx]
-        QA[Q&A Module]
-        NextStep[Next-Step Learning Path]
-        Progress[Progress Summary Module]
-        
-        App --> QA
-        App --> NextStep
-        App --> Progress
-    end
+![Architecture Diagram](https://flowgif.com/img/pako:eJyFVG1v2jAQ_iunSK1AGu33aULKYK2QugkG_ZTywThHsJbYme20oKb_fec4CUkDGhLosJ_n7rk3vwdcxRh8hWCfqjd-YNrCZv4igT43N_BsUMNCWtSMW6Gkv3Cno6i6u4cnZFqi3o5hMpmWDdbAq2DwXas3QpUQ5vmLbL3-RkLAg1YEljGsi12iWX7w96b-d76PPuHJWSo4c3q2nuM-dBrR986aI6nKmJDO7ABWYbS6DeGniosUO-e_8GjXFvPIGRNn-ZyETGDJ7KEDXWqVaDQmagzSnmVMn4Zee8JcaSj-8KyJPbxpIvgbSrtTvyfFWQozatyOGYRbWKN-FRzNtVJWhDmzDKI-tyN4VmgteJEWWTTirU01_LbT07Ut4hOxXAPsuMPanHI0U-t-a2gVphqDPSNJHewjZkKKWmsUmVr0fVKd1_RwAeFyAbNUUKTt9lL6P47kXFIWDngl4xYTtVYdeCCIvIxGj0olKdYnzvF4fCk0VUBitQkG9lpl8LwAq-qGuMw9chVWy_CAlh-oK1blggN31TvaslNpj26GoOLQrMcGco0x7oXEGHIaQTMktRPoSBtauT-GImR5ik5dH_8_-VTzujg9-UtmDKn_W6BxFJqz81yU_W5eTKQiNtmbIkm8H3OR28un5SZITwuzVAbjF23AvZ5bDXEJdifGE3peqphumJq45Xk0unAH8fJsoWVXnW_sNWluSSDGnGYJJRdU09FcWcdLqcWmnrT2fZvcUYxnV_pqr0q_ZB503uTLqOALBBlqev5ietTfA3vArHreaZxYkdrg4-Mf5xz5gg?type=jpeg)
 
-    subgraph LocalData [Local Codebase]
-        Curriculum[(curriculum.ts)]
-        Types>types.ts]
-        GeminiService[[services/gemini.ts]]
-    end
+---
 
-    subgraph External [External Service]
-        GeminiAPI((Google Gemini API))
-    end
-
-    QA -->|Fetches topic context| Curriculum
-    NextStep -->|Reads predefined paths| Curriculum
-    Progress -->|Tracks completion| Curriculum
-
-    QA -->|Passes question & curriculum| GeminiService
-    NextStep -->|Requests topic suggestions| GeminiService
-    Progress -->|Requests generated summary| GeminiService
-
-    GeminiService -->|API Requests| GeminiAPI
-    GeminiAPI -->|Returns generated text| GeminiService
-
-```
 
 
 ## 📖 How to Use Select a Topic: 
