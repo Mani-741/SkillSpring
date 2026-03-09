@@ -1,6 +1,7 @@
 # AI Personal Learning Assistant
 
-[cite_start]The AI Personal Learning Assistant is a beginner-friendly, intelligent tool designed to help learners understand topics, ask questions, and track their educational journey[cite: 3]. [cite_start]The goal is to create a supportive environment that enhances the learning experience using AI[cite: 4].
+1.The AI Personal Learning Assistant is a beginner-friendly, intelligent tool designed to help learners understand topics, ask questions, and track their educational journey.
+2.The goal is to create a supportive environment that enhances the learning experience using AI.
 
 ---
 
