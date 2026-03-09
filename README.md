@@ -116,5 +116,11 @@ flowchart TD
 
 ## 📖 How to Use Select a Topic: 
 Open the application and choose a topic from the Dashboard or Learning view.Read & Learn: Review the curriculum material presented on the screen.Ask Questions: Use the chat interface to ask any questions. The AI will answer based only on the provided material.Track Progress: Check the dashboard to see your generated learning summary and follow the AI's suggestions for your next steps.
-🔒 Security NotesAPI Key Protection: The Google Gemini API key is stored in the .env file and prefixed with VITE_ to be accessible to the frontend build. Do not commit your .env file to version control.Production: For a true production environment, consider moving the Gemini API calls to a secure backend to completely hide the API key from the client browser.
-🚀 Future EnhancementsBackend Integration: Replace the static curriculum.ts with a dynamic database (like PostgreSQL) to support multiple courses and user accounts.User Authentication: Implement secure login to save progress across different devices.Rich Media Support: Allow the AI to suggest video links or interactive coding snippets.
+
+
+## 🔒 Security NotesAPI Key Protection:
+The Google Gemini API key is stored in the .env file and prefixed with VITE_ to be accessible to the frontend build. Do not commit your .env file to version control.Production: For a true production environment, consider moving the Gemini API calls to a secure backend to completely hide the API key from the client browser.
+
+
+## 🚀 Future EnhancementsBackend Integration: 
+Replace the static curriculum.ts with a dynamic database (like PostgreSQL) to support multiple courses and user accounts.User Authentication: Implement secure login to save progress across different devices.Rich Media Support: Allow the AI to suggest video links or interactive coding snippets.
